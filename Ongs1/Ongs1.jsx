@@ -5,6 +5,7 @@ import MenuLateral from "../MenuLateral/MenuLateral.jsx";
 import Titulo from "../Titulo/Titulo.jsx";
 import css from './Ongs1.module.css'
 import Curtida from "../Curtida/Curtida.jsx";
+import Botao from "../Botao/Botao.jsx";
 
 export default function Ongs({api}) {
     const api_url = api
@@ -98,7 +99,7 @@ export default function Ongs({api}) {
                                     <p className={css.cardDesc}>{ong.descricao_breve?.substring(0, 80) || 'Sem descrição'}...</p>
                                     <span className={css.cardCategoria}>{ong.categoria || 'ONG'}</span>
                                 </div>
-                                <Curtida/>
+                                <Botao texto={'Seguir'} cor={'seguir'}/>
                             </Link>
                         ))
                     )}
